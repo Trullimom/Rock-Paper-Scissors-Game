@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  font-family: Arial;
+  margin: 30px;
+}
+
+@keyframes blink {
+  from {
+    background-image: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+  }
+  to {
+    background-image: linear-gradient(to left, #ec4899, #8b5cf6);
+  }
+}
+
+h1 {
+  /* animation: name duration timing-function delay iteration-count direction
+    fill-mode; */
+  animation: blink 0.5s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+}
+.js-move {
+  width: 130px;
+  height: 130px;
+  font-size: 50px;
+  border-radius: 75px;
+  border: 3px solid white;
+  background-color: transparent;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.js-move:active {
+  border: 5px solid rgb(252, 68, 68);
+  font-size: 70px;
+}
+
+.result {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.display-moves,
+.score {
+  font-size: 25px;
+}
+
+.small-icon {
+  font-size: 50px;
+}
+
+.reset-btn,
+.auto-play {
+  width: 130px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset-btn:active,
+.auto-play:active {
+  background-color: rgb(167, 167, 167);
+}
