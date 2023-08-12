@@ -1,4 +1,4 @@
-const score = JSON.parse(localStorage.getItem("score")) || {
+const score = /* JSON.parse(localStorage.getItem("score")) || */ {
   Wins: 0,
   Losses: 0,
   Ties: 0,
@@ -98,7 +98,7 @@ function playGame(playerMove) {
     ".score"
   ).innerHTML = `Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`;
 
-  localStorage.setItem("score", JSON.stringify(score));
+  /* localStorage.setItem("score", JSON.stringify(score)); */
 }
 
 document.querySelector(".reset-btn").addEventListener("click", () => {
