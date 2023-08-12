@@ -1,8 +1,10 @@
-const score = /* JSON.parse(localStorage.getItem("score")) || */ {
-  Wins: 0,
-  Losses: 0,
-  Ties: 0,
-};
+const score =
+  /* JSON.parse(localStorage.getItem("score")) || */
+  {
+    Wins: 0,
+    Losses: 0,
+    Ties: 0,
+  };
 
 updateScoreElement();
 
@@ -108,6 +110,7 @@ document.querySelector(".reset-btn").addEventListener("click", () => {
   document.querySelector(
     ".score"
   ).innerHTML = `Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`;
+  autoPlay(isAutoPlaying);
 });
 
 function updateScoreElement() {
